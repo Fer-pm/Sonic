@@ -1,0 +1,99 @@
+<!-HTML nos sirve para crear paginas web->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!-Head es el encabezado->
+  <!-Elementos cruciales van en el head->
+  <!-Hacer referencia al archivo CSS->
+ <link rel="stylesheet" type="text/css" href="style2.css">
+  <!-Se abre style para escribir codigo de CSS en html->
+ <style>
+   /*Modificamos el body que es el cuerpo de la pagina*/
+   
+    body {
+   
+      /*Background es para el fondo de la pagina*/
+      
+        background-repeat: no-repeat;
+      
+    /*no-repeat para que no se repita la imagen del fondo y si no se poniera no-repeat se repetiria la imagen por toda la pagina*/
+      
+        background-size: 100% 100%;
+      /*Background-size es para el tamaño de la imagen que sera para el fondo*/
+      /*Hay 2 100%, horizontal y vertical*/
+    
+    }
+    
+    </style>
+</head>
+
+<body>
+    <body id="body">
+<!-Id es para darle una identificacion a un tag para luego usarlos en JavaScript y CSS->
+<!-Crear Id para usarlos en JS y CSS->
+      <!-Botones para cambiar la imagen de fondo->
+        <button id="button1">Change to Image 1</button>
+        
+        <button id="button2">Change to Image 2</button>
+
+        <button id="button3">Change to Image 3</button>
+      <!-Audios de musica para la pagina->
+      <!-SRC es para linkear una pagina web->
+        <Audio id="level1" src="https://fi.zophar.net/soundfiles/sega-mega-drive-genesis/sonic-the-hedgehog-3/11%20-%20IceCap%20Zone%20Act%201.mp3"></Audio>
+
+        <Audio id="level2" src="https://fi.zophar.net/soundfiles/sega-mega-drive-genesis/sonic-knuckles/03%20-%20Mushroom%20Hill%20Zone%20Act%201.mp3"></Audio>
+
+        <Audio id="level3" src="https://fi.zophar.net/soundfiles/sega-mega-drive-genesis/sonic-the-hedgehog-2/07%20-%20Aquatic%20Ruin%20Zone.mp3"></Audio>
+      
+<!-Audios para los sonidos de sonic->
+<audio id="stopsnd" src="https://www.myinstants.com/media/sounds/sonicded.mp3"></audio>
+
+        <audio id="jumpsnd" src="https://www.myinstants.com/media/sounds/jump.mp3"></audio>
+
+        <audio id="sprintsnd" src="https://www.myinstants.com/media/sounds/sonic-spindash.mp3"></audio>
+        
+      <!-Se abre Script para escribir codigo de JS en html->
+       <!-Tag o etiqueta es lo que nos permite darle contenido o funcion en la pagina web en HTML->
+        <script>
+          document.getElementById("button1").addEventListener("click", function() {
+            //Document nos permite identificar el HTML en JavaScript
+        //Al presionar el boton, se cambia a la imagen del nivel 1
+            document.getElementById("body").style.backgroundImage = "url('https://bghq.com/bgs/gen/s/s3/647.png')";
+        //Usamos Id de body para cambiar el fondo al presionar el boton
+        //Se cambia a la imagen del URL
+        });
+        
+        
+        document.getElementById("button2").addEventListener("click", function() {
+        //Al presionar el boton, se cambia a la imagen del nivel 2
+            document.getElementById("body").style.backgroundImage = "url('https://bghq.com/bgs/gen/s/sk/001.png')";
+        
+        });
+
+        document.getElementById("button3").addEventListener("click", function() {
+        //Al presionar el boton, se cambia a la imagen del nivel 3
+        document.getElementById("body").style.backgroundImage = "url('https://bghq.com/bgs/gen/s/s2/238.png')";
+    
+    });
+        
+        </script>
+        
+<!-Botones de las acciones de sonic->
+      <!-Colocamos div para hacer un espaciado para los botones->
+      <!-Class para permitirnos usarlo en diferentes elementos->
+ <div id="animationDiv" class="animation1"></div>
+
+ <button id="Sprint">Sprint</button>
+
+ <button id="Stop">Stop</button>
+
+ <button id="Jump">Jump</button>
+
+<!-Hacer referencia al archivo JavaScript->
+ <script src="sonic2.js"></script>
+
+</body>
+
+</html>

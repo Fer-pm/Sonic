@@ -1,0 +1,294 @@
+/*Se usa punto ya que es un class en HTML*/
+/*Animacion de sonic corriendo*/
+.animation1 {
+    background-image: url('https://media.tenor.com/jD4sqQ5G6hIAAAAi/sonic-running.gif');
+/*Background size para colocarle tamaño al fondo*/
+  /*Cover para que cubra toda la pagina*/
+    background-size: cover;
+/*Posicion absolute para que sea de acorde al tamaño de la pagina*/
+    position: absolute;
+/*Anchura de la imagen*/
+  /*Si no tiene absolute, la imagen no estara de acorde al tamaño de la pagina*/
+    width: 100px;
+  /*PX es una medida de CSS. px=pixeles*/
+/*Altura de la imagen*/
+    height: 100px;
+   /*Tipo de animacion, 2 segundos linear de forma infinita*/
+  /*Sonic se mueve de izquierda a derecha infinitamente*/
+    animation: move 2s linear infinite;
+/*Espaciado entre la parte de arriba de la pagina*/
+    top: 60%;
+   
+   }
+   /*Lo mismo va para animation2 y jumping*/
+   
+   .animation2 {
+   
+background-image: url('https://media.tenor.com/ukr3M5r6sh8AAAAi/sonic-waiting.gif');
+
+background-size: cover;
+
+position: absolute;
+
+    width: 100px;
+   
+    height: 100px;
+
+    animation: stop;
+
+    top: 60%;
+   
+   }
+   /*Primer jumping para aañadirle el tamaño*/
+.Jumping {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d8cc1ee-7a4d-43e3-a18b-e3cd6fcde047/dfutpr0-e1a4e3f6-14dc-467e-ba65-4d1a47f0aa2f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkOGNjMWVlLTdhNGQtNDNlMy1hMThiLWUzY2Q2ZmNkZTA0N1wvZGZ1dHByMC1lMWE0ZTNmNi0xNGRjLTQ2N2UtYmE2NS00ZDFhNDdmMGFhMmYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oatShqHc-m46u4nAfE35t-QZzCTYIh7Jvh50n0Fu7wg');
+  
+  background-size: cover;
+
+position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    top: 60%;
+
+  animation-duration: 1s;
+    
+  animation-timing-function: ease;
+}
+/*Segundo jumping para declarar una variable para añadirle animacion*/
+  .Jumping {
+    animation-name: saltar;
+  }
+
+/*Añadir movimiento al salto de Sonic*/
+/*Keyframe para añadirle animacion de salto de sonic*/
+  @keyframes saltar {
+  /*Longitud de animacion*/
+    /*TranslateY para moverse verticalmente*/
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);/*Sonic saltando hacia arriba*/
+      /*50% para la mitad de la animacion y negativo px para que salte arriba*/
+    }
+  } 
+
+/*Añadir movimiento al salto de Sonic*/
+/*Segundo keyframe para añadir animacion de movimiento a sonic corriendo*/
+   @keyframes move {
+   /*Longitud de animacion*/
+     /*TranslateX para moverse horizontalmente*/
+     0% { transform: translateX(0); }
+   
+     100% { transform: translateX(1250px);/*Sonic corriendo de izquierda a derecha*/ } /*100% para la animacion completa de las medidas de los pixeles*/
+   
+   }
+
+/*Diseño de body*/
+   body {
+   
+    height: 100vh;/*Para rellenar toda la pagina*/
+   
+    margin: 0;
+     /*Margin es para el espaciado y los bordes de la pagina*/
+     /*0 Para que no haya bordes*/
+     /*normalmente html tiene bordes*/
+   
+    background-color: #ff0000;/*Color rojo para el fondo de la pagina*/
+   
+   }
+   
+/*Seccion de botones para acciones de Sonic*/
+   #Jump {
+    background-color: #209ce4;/*Color celeste*/
+
+    justify-content: center;/*Centralizar los contenidos del boton*/
+
+    align-items: center;/*Centrear el boton*/
+   
+    height: fit-content;/*Acomodar el boton*/
+     /*Acomodar el boton de acuerdo a los contenidos de adentro*/
+
+    border: none;/*Quitarle los bordes*/
+   
+    color: rgb(255, 255, 255);/*Color del texto*/
+   /*RGB= Red, Green, Blue*/
+     /*Va a dar blanco*/
+     
+    padding: 15px/*Tamaño vertical*/ 32px/*Tamaño horizontal*/;   /*Cambiar el tamaño del boton*/
+   
+    text-align: center;/*Centralizar el texto dentro del boton*/
+   
+    text-decoration: none;/*Quitarle la decoracion del texto: la fuente y otros*/
+   
+    font-size: 16px; /*Tamaño de todo el boton*/
+   
+    margin: 5px 200px; /*Posicionamiento del boton a la derecha*/ /*Es el posicionamiento del boton*/
+   
+    cursor: pointer;/*Cambiar el puntero al situarlo en el boton*/
+   
+position: absolute;/*Position dependiente de la pagina*/ /*Mucho o menos zoom*/
+
+    top: 50%;/*Mitad de la pagina*/ /*Parte arriba de la pagina*/ /*Espaciado*/
+
+    left: 50%;/*Mita de la pagina*/ /*Parte izquierda de la pagina*/ /*Espaciado*/
+    
+  }/*Lo mismo va para los demas botones excepto margin*/
+
+  
+   #Sprint {
+   
+    background-color: #209ce4;
+
+    justify-content: center;
+
+    align-items: center;
+   
+height: fit-content;
+
+    border: none;
+   
+    color: rgb(255, 255, 255);
+   
+    padding: 15px 32px;
+   
+    text-align: center;
+   
+    text-decoration: none;
+   
+    font-size: 16px;
+   
+    margin: 5px -200px; /*Posicionamiento del boton a la izquierda*/ /*Boton de correr*/
+   
+    cursor: pointer;
+   
+position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+   }
+
+   #Stop {
+   
+    background-color: #209ce4;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: fit-content;
+   
+    border: none;
+   
+    color: rgb(255, 255, 255);
+   
+    padding: 15px 32px;
+   
+    text-align: center;
+   
+    text-decoration: none;
+   
+    font-size: 16px;
+   
+     margin: 4px 2px; /*Posicionamiento del boton en el medio*/ /*Boton de detenerse*/
+   
+    cursor: pointer;
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+   
+   }
+
+/*Seccion de botones de los niveles*/
+/*Es hashtag porque es un id en html*/
+/*Se le pone hashtag para identificarlo en CSS*/
+   #button1 {
+
+    background-image: url('https://bghq.com/bgs/gen/s/s3/647.png'); /*Link a la imagen de la izquierda*/
+
+    background-size: 100% 100%;/*Tamaño de la imagen*/ /*El primer 100% es vertical y el segundo 100% es horizontal para que llene el boton*/
+
+    background-position: center; /*Posicion de la imagen en el centro del boton*/
+
+    background-repeat: no-repeat; /*Para que la imagen no se repita*/
+
+    color: transparent; /*Las letras transparentes para que no se vean*/
+
+    width: 200px;/*Anchura de la imagen*/
+
+    height: 100px;/*Altura de la imagen*/
+
+    cursor: pointer;/*Cambiar el cursor al situarlo en el boton*/
+
+    top: 5%; /*Espaciado de la parte de arriba*/
+
+    left: 50%;/*Espaciado de la parte de izquierda*/
+
+    margin: 10px -350px;/*Situar el boton a la izquierda*/ /*Primer nivel*/
+
+    position: absolute;/*Posicion de acorde a la pagina*/
+   }/*Lo mismo va para los demas botones*/
+  
+   #button2 {
+
+    background-image: url('https://bghq.com/bgs/gen/s/sk/001.png'); /*Link de la imagen del medio*/
+
+    background-size: 100% 100%;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    color: transparent;
+     /*Para que no se vea el texto*/
+
+    width: 200px;
+
+    height: 100px;
+
+    cursor: pointer;
+
+    top: 5%;
+
+    left: 50%;
+
+    margin: 10px -50px;/*Situar el boton en el medio*/ /*Segundo nivel*/
+
+
+    position: absolute;
+   }
+  
+   #button3 {
+
+    background-image: url('https://bghq.com/bgs/gen/s/s2/238.png'); /*Link de la imagen de la derecha*/
+
+    background-size: 100% 100%;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    color: transparent;
+
+    width: 200px;
+
+    height: 100px;
+
+    cursor: pointer;
+
+    top: 5%;
+
+    left: 50%;
+
+    margin: 10px 200px;/*Situar el boton a la derecha*/ /*Tercer nivel*/
+
+    position: absolute;
+   }
+  
